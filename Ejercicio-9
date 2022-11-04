@@ -1,0 +1,67 @@
+public class Main{
+        public static void main(String[] args) {
+            Cliente cliente = new Cliente();
+            System.out.println("Clase cliente");
+            cliente.setEdad(20);
+            System.out.println("Edad del cliente: " + cliente.getEdad());
+            cliente.setNombre("Naimer");
+            System.out.println("El nombre del cliente es: " + cliente.getNombre());
+            cliente.setTelefono(3008899);
+            System.out.println("el telefono del cliente es: " + cliente.getTelefono());
+            cliente.setCredito(1000);
+            System.out.println("El credito del cleinte es: " + cliente.getCredito());
+            System.out.println("");
+
+            System.out.println("Clase trabajador");
+            Trabajador trabajador = new Trabajador();
+            trabajador.setEdad(30);
+            System.out.println("Edad del trabajador: " + trabajador.getEdad());
+            trabajador.setNombre("Mercado");
+            System.out.println("El nombre del trabajadore es: " + trabajador.getNombre());
+            trabajador.setTelefono(3009999);
+            System.out.println("el telefono del trabajador es: " + trabajador.getTelefono());
+            trabajador.setSalario(200);
+            System.out.println("El credito del trabajadore es: " + trabajador.getSalario());
+        }
+        public static class Persona{
+                int edad;
+                String nombre;
+                int telefono;
+                public void setEdad(int edad){
+                    this.edad = edad;
+                }
+                public int getEdad(){
+                    return this.edad;
+                }
+                public void setNombre(String nombre){
+                    this.nombre=nombre;
+                }
+                public String getNombre() {
+                    return this.nombre;
+                }
+                public void setTelefono(int telefono){
+                    this.telefono=telefono;
+                }
+                public int getTelefono(){
+                    return this.telefono;
+                }
+            }
+        public static class Cliente extends Persona{
+                int credito;
+                public void setCredito(int credito){
+                    this.credito=credito;
+                }
+                public int getCredito(){
+                    return this.credito;
+                }
+            }
+        public static class Trabajador extends Persona{
+                private int salario;
+                public void setSalario(int salario){
+                    this.salario=salario;
+                }
+                public int getSalario(){
+                    return  this.salario;
+                }
+            }
+        }
